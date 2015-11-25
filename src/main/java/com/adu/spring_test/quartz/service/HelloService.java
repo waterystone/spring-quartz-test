@@ -14,7 +14,7 @@ public class HelloService {
 	public void work() {
 		logger.debug("start...");
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			logger.error("[ERROR-work]", e);
 		}
