@@ -9,9 +9,16 @@ import org.apache.commons.logging.LogFactory;
  * @date 2015/4/1 10:49
  */
 public class HelloService {
-    private final Log logger = LogFactory.getLog(this.getClass());
+	private final Log logger = LogFactory.getLog(this.getClass());
 
-    public void work() {
-        logger.debug("hello,world");
-    }
+	public void work() {
+		logger.debug("start...");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			logger.error("[ERROR-work]", e);
+		}
+		logger.debug("end...");
+
+	}
 }
